@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神攻略站 - 全网最简纯净攻略查询平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        genshin: {
+                            bg: '#0b1220',
+                            main: '#152033',
+                            gold: '#d4b866',
+                            light: '#e5e7eb'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .card-hover { @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-amber-900/20; }
+            .nav-active { @apply text-genshin-gold; }
+        }
+    </style>
+</head>
+<body class="bg-genshin-bg text-genshin-light min-h-screen">
+    <header class="sticky top-0 z-50 bg-genshin-main shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold text-genshin-gold flex items-center">
+                <i class="fa-solid fa-wind mr-2"></i>原神攻略站
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="nav-active font-medium">首页</a>
+                <a href="role.html" class="hover:text-genshin-gold transition">角色攻略</a>
+                <a href="map.html" class="hover:text-genshin-gold transition">地图探索</a>
+                <a href="task.html" class="hover:text-genshin-gold transition">任务/深渊</a>
+            </nav>
+            <div class="relative w-52 hidden md:block">
+                <input type="text" placeholder="搜索角色/材料/任务..." class="w-full bg-slate-700 rounded-full py-2 px-4 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-genshin-gold transition">
+                <i class="fa-solid fa-search absolute left-3 top-2.5 text-slate-400"></i>
+            </div>
+            <button class="md:hidden text-xl"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-10">
+        <section class="bg-gradient-to-r from-indigo-900/80 to-blue-900/80 rounded-2xl p-8 mb-10">
+            <h2 class="text-2xl font-bold text-genshin-gold mb-2">欢迎来到原神纯净攻略站</h2>
+            <p class="text-slate-300">无广告、无弹窗、纯干货｜版本攻略持续更新中</p>
+        </section>
+
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-12">
+            <a href="role.html" class="bg-genshin-main rounded-xl p-6 text-center card-hover">
+                <i class="fa-solid fa-user-astronaut text-3xl text-genshin-gold mb-3"></i>
+                <h3 class="font-medium text-lg">角色攻略</h3>
+                <p class="text-sm text-slate-400">配装/配队/养成</p>
+            </a>
+            <a href="map.html" class="bg-genshin-main rounded-xl p-6 text-center card-hover">
+                <i class="fa-solid fa-map-location-dot text-3xl text-genshin-gold mb-3"></i>
+                <h3 class="font-medium text-lg">地图探索</h3>
+                <p class="text-sm text-slate-400">神瞳/宝箱/采集</p>
+            </a>
+            <a href="task.html" class="bg-genshin-main rounded-xl p-6 text-center card-hover">
+                <i class="fa-solid fa-scroll text-3xl text-genshin-gold mb-3"></i>
+                <h3 class="font-medium text-lg">任务攻略</h3>
+                <p class="text-sm text-slate-400">主线/世界任务</p>
+            </a>
+            <a href="task.html" class="bg-genshin-main rounded-xl p-6 text-center card-hover">
+                <i class="fa-solid fa-chess-board text-3xl text-genshin-gold mb-3"></i>
+                <h3 class="font-medium text-lg">深渊副本</h3>
+                <p class="text-sm text-slate-400">满星阵容打法</p>
+            </a>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold border-l-4 border-genshin-gold pl-4 mb-6">?? 热门攻略精选</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-genshin-main rounded-xl overflow-hidden card-hover">
+                    <div class="h-44 bg-slate-700 flex items-center justify-center">
+                        <i class="fa-solid fa-image text-4xl text-slate-500"></i>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-medium mb-2">全角色通用培养指南</h3>
+                        <p class="text-sm text-slate-400">从零开荒到毕业最全养成思路</p>
+                    </div>
+                </div>
+                <div class="bg-genshin-main rounded-xl overflow-hidden card-hover">
+                    <div class="h-44 bg-slate-700 flex items-center justify-center">
+                        <i class="fa-solid fa-image text-4xl text-slate-500"></i>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-medium mb-2">全地图神瞳一次性收集路线</h3>
+                        <p class="text-sm text-slate-400">全覆盖、无遗漏、最简跑图</p>
+                    </div>
+                </div>
+                <div class="bg-genshin-main rounded-xl overflow-hidden card-hover">
+                    <div class="h-44 bg-slate-700 flex items-center justify-center">
+                        <i class="fa-solid fa-image text-4xl text-slate-500"></i>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-medium mb-2">当期深渊12层满星攻略</h3>
+                        <p class="text-sm text-slate-400">平民低练度稳定通关阵容</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20 py-6 bg-genshin-main text-center text-slate-400 text-sm">
+        <p>原神攻略站 ? 2026 纯净无广告攻略平台</p>
+    </footer>
+</body>
+</html>
